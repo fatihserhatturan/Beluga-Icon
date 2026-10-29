@@ -60,7 +60,11 @@ export function App() {
         <div className="header-inner">
           <div className="header-brand">
             <div className="header-logo-wrap">
-              <img src="/beluga-icon.svg" alt="Beluga Icon logo" className="header-logo-img" />
+              <img
+                src={`${import.meta.env.BASE_URL}beluga-icon.svg`}
+                alt="Beluga Icon logo"
+                className="header-logo-img"
+              />
             </div>
             <div>
               <h1 className="header-title">Beluga Icon</h1>
