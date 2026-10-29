@@ -29,9 +29,6 @@
   <a href="https://www.npmjs.com/package/@beluga-icon/react">
     <img src="https://img.shields.io/npm/dm/@beluga-icon/react?color=0ea5e9" alt="npm downloads" />
   </a>
-  <a href="https://bundlephobia.com/package/@beluga-icon/react">
-    <img src="https://img.shields.io/bundlephobia/minzip/@beluga-icon/react?label=minzipped" alt="Bundle size" />
-  </a>
   <img src="https://img.shields.io/badge/TypeScript-strict-3178c6" alt="TypeScript" />
   <img src="https://img.shields.io/badge/license-MIT-black" alt="License: MIT" />
 </p>
