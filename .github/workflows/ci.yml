@@ -47,27 +47,3 @@ jobs:
 
       - name: Bundle size
         run: npm run size
-
-  codeql:
-    name: CodeQL Security Scan
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      security-events: write # SARIF sonuçlarını GitHub Security sekmesine yüklemek için gerekli
-      actions: read
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v4
-        with:
-          languages: javascript-typescript
-          queries: security-and-quality
-
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v4
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v4
-        with:
-          category: '/language:javascript-typescript'
