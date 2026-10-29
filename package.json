@@ -12,6 +12,7 @@
     "build": "npm run build --workspaces --if-present",
     "generate": "tsx scripts/generate-icons.ts",
     "generate:watch": "tsx watch scripts/generate-icons.ts",
+    "readme:preview": "tsx scripts/generate-readme-preview.ts",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit -p packages/core/tsconfig.json && tsc -p packages/react/tsconfig.typecheck.json",
     "test": "vitest run",

@@ -4,6 +4,8 @@ React icon components for the Beluga Icon library. Stroke-based SVG icons with b
 
 > **Bring your own style.** Every icon accepts an `iconStyle` and `animation` prop out of the box — no extra wrappers, no CSS overrides needed. You can also inject custom colors per-style via `styleColors`.
 
+Browse every icon, style and animation in the **[live demo](https://fatihserhatturan.github.io/Beluga-Icon/)**.
+
 ## Install
 
 ```bash
@@ -100,28 +102,20 @@ Pass a number for a custom pixel size: `<SearchIcon size={36} />`
 Some styles accept custom colors via `styleColors`:
 
 ```tsx
-{
-  /* Gradient: from / mid / to */
-}
-;<StarIcon iconStyle="gradient" styleColors={{ from: '#f43f5e', mid: '#a855f7', to: '#06b6d4' }} />
+// Gradient: from / mid / to
+<StarIcon iconStyle="gradient" styleColors={{ from: '#f43f5e', mid: '#a855f7', to: '#06b6d4' }} />
 
-{
-  /* Aurora: three hue stops */
-}
-;<BellIcon iconStyle="aurora" styleColors={{ a: '#06b6d4', b: '#8b5cf6', c: '#f43f5e' }} />
+// Aurora: three hue stops
+<BellIcon iconStyle="aurora" styleColors={{ a: '#06b6d4', b: '#8b5cf6', c: '#f43f5e' }} />
 
-{
-  /* Metallic: light / base / dark */
-}
-;<LockIcon
+// Metallic: light / base / dark
+<LockIcon
   iconStyle="metallic"
   styleColors={{ light: '#e2e8f0', base: '#94a3b8', dark: '#475569' }}
 />
 
-{
-  /* Duotone: foreground / background */
-}
-;<HeartIcon iconStyle="duotone" styleColors={{ a: '#f43f5e', b: '#fecdd3' }} />
+// Duotone: foreground / background
+<HeartIcon iconStyle="duotone" styleColors={{ a: '#f43f5e', b: '#fecdd3' }} />
 ```
 
 ## Animations
@@ -147,25 +141,17 @@ Some styles accept custom colors via `styleColors`:
 ### Trigger Modes
 
 ```tsx
-{
-  /* Plays automatically on mount, loops */
-}
-;<LoaderIcon animation="spin" trigger="auto" />
+// Plays automatically on mount, loops
+<LoaderIcon animation="spin" trigger="auto" />
 
-{
-  /* Plays once on hover */
-}
-;<BellIcon animation="shake" trigger="hover" playOnce />
+// Plays once on hover
+<BellIcon animation="shake" trigger="hover" playOnce />
 
-{
-  /* Plays on click */
-}
-;<HeartIcon animation="heartbeat" trigger="click" />
+// Plays on click
+<HeartIcon animation="heartbeat" trigger="click" />
 
-{
-  /* Plays when scrolled into view */
-}
-;<StarIcon animation="draw" trigger="visible" playOnce />
+// Plays when scrolled into view
+<StarIcon animation="draw" trigger="visible" playOnce />
 ```
 
 ## Shared Config — IconProvider
@@ -174,7 +160,8 @@ Wrap your app (or a section) to set defaults once:
 
 ```tsx
 import { IconProvider } from '@beluga-icon/react'
-;<IconProvider iconStyle="glass" animation="pulse" trigger="hover" size="lg">
+
+<IconProvider iconStyle="glass" animation="pulse" trigger="hover" size="lg">
   <SearchIcon /> {/* inherits all provider defaults */}
   <HeartIcon color="#ef4444" /> {/* override individual props */}
 </IconProvider>
@@ -187,15 +174,11 @@ Icons are **decorative by default** (`aria-hidden="true"`).
 Add a `label` to expose the icon to screen readers:
 
 ```tsx
-{
-  /* Decorative — hidden from screen readers */
-}
-;<HeartIcon />
+// Decorative — hidden from screen readers
+<HeartIcon />
 
-{
-  /* Accessible — announces "Add to favorites" */
-}
-;<HeartIcon label="Add to favorites" />
+// Accessible — announces "Add to favorites"
+<HeartIcon label="Add to favorites" />
 ```
 
 When `label` is provided the icon receives `role="img"` and `aria-label` automatically.
